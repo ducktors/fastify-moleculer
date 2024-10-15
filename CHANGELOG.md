@@ -1,5 +1,11 @@
 # fastify-moleculer
 
+## 0.1.3
+
+### Patch Changes
+
+- 236c8d2: fixed missing configuration
+
 ## 0.1.2
 
 ### Patch Changes
