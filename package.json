@@ -20,6 +20,8 @@
     "build": "rimraf dist && tsc --build",
     "check:types": "tsc --noEmit",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "commit": "npx git-cz",
+    "commitlint": "commitlint",
     "lint": "biome check .",
     "format": "biome format --write .",
     "prepare": "husky",
