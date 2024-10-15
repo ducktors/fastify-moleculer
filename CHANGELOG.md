@@ -1,5 +1,11 @@
 # fastify-moleculer
 
+## 0.1.2
+
+### Patch Changes
+
+- 41f86c7: Publish first version on NPM Registry
+
 ## 0.1.1
 
 ### Patch Changes

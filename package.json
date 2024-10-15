@@ -1,6 +1,6 @@
 {
   "name": "fastify-moleculer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": "false",
   "description": "Fastify plugin to integrate moleculer in Fastify applications",
   "author": "Manuel Salvatore Martone - @hoghweed",
