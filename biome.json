@@ -1,0 +1,41 @@
+{
+    "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space",
+      "lineWidth": 100,
+      "ignore": [
+        "**/dist/*",
+        "**/coverage/*",
+        ".turbo/**",
+        "biome.json"
+      ]
+    },
+    "linter": {
+      "enabled": true,
+      "ignore": [
+        "**/dist/*",
+        "**/coverage/*",
+        ".turbo/**",
+        "biome.json"
+      ],
+      "rules": {
+        "recommended": true,
+        "style": {
+          "noUnusedTemplateLiteral": "off"
+        },
+        "complexity": {
+          "useSimplifiedLogicExpression": "off"
+        },
+        "suspicious": {
+          "noExplicitAny": "off"
+        }
+      }
+    },
+    "javascript": {
+      "formatter": {
+        "quoteStyle": "single",
+        "quoteProperties": "preserve"
+      }
+    }
+  }
