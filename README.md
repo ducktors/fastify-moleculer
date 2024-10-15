@@ -60,6 +60,34 @@ The plugin also adds an `onClose` hook which closes the socket server when the `
 The `broker` decorator is typed to moleculer [ServiceBroker](https://moleculer.services/docs/0.14/broker) type.
 The plugin supports loading Typescript service classes from a given folder optionally overriding the default file mask of `.service.(js|ts)`.
 
+## Contribute to this project
+
+1. Clone this repository
+
+   `git clone git@github.com:github.com/ducktors/fastify-moleculer.git`
+
+2. Move inside repository folder
+
+   `cd fastify-moleculer`
+
+3. Install dependencies
+
+   `pnpm install`
+
+## How to release
+
+The release is performed by the maintainers of the repository. New versions are managed via [changesets](https://github.com/changesets/changesets).
+
+To release a new version, simply choose which package to bump with `pnpm release` command:
+
+```
+$ pnpm release
+
+> @ducktors/fastify-moleculer@0.9.0 release /ducktors-workstation/fastify-moleculer
+> changeset
+
+```
+
 ## License
 
 Licensed under [MIT](./LICENSE).<br/>
