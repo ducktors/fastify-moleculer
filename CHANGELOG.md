@@ -1,5 +1,11 @@
 # fastify-moleculer
 
+## 0.1.4
+
+### Patch Changes
+
+- c40639b: removed useless private configuration
+
 ## 0.1.3
 
 ### Patch Changes
