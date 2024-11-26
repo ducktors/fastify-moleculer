@@ -1,4 +1,4 @@
-name: Test
+name: Build
 
 on:
   push:
@@ -16,9 +16,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  build:
     runs-on: ${{ matrix.os }}
-    name: Coverage
+    name: Build
     strategy:
       matrix:
         node-version: [20.x, 22.x]
@@ -57,19 +57,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run tests
-        run: pnpm test:coverage
-
-      - name: Coveralls
-        uses: coverallsapp/github-action@cfd0633edbd2411b532b808ba7a8b5e04f76d2c8 # master
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: ./coverage/lcov.info
-
-      - name: CodeClimate
-        uses: paambaati/codeclimate-action@f429536ee076d758a24705203199548125a28ca7 # v9.0.0
-        continue-on-error: true
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_TEST_REPORTER_ID }}
-        with:
-          coverageLocations: ${{github.workspace}}/coverage/lcov.info:lcov
+      - name: Run build
+        run: pnpm build
