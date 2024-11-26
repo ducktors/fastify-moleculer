@@ -1,17 +1,38 @@
 # fastify-moleculer
 
-[![CI](https://github.com/ducktors/fastify-moleculer/actions/workflows/ci.yml/badge.svg)](https://github.com/ducktors/fastify-moleculer/actions/workflows/ci.yml) [![Test](https://github.com/ducktors/fastify-moleculer/actions/workflows/test.yaml/badge.svg)](https://github.com/ducktors/fastify-moleculer/actions/workflows/test.yaml) [![npm](https://img.shields.io/npm/v/fastify-moleculer)](https://www.npmjs.com/package/fastify-moleculer) [![Coverage Status](https://coveralls.io/repos/github/ducktors/fastify-moleculer/badge.svg?branch=master)](https://coveralls.io/github/ducktors/fastify-moleculer?branch=master) [![Maintainability](https://api.codeclimate.com/v1/badges/8415332abe3ff865131d/maintainability)](https://codeclimate.com/github/ducktors/fastify-moleculer/maintainability) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/ducktors/fastify-moleculer/badge)](https://securityscorecards.dev/viewer/?uri=github.com/ducktors/fastify-moleculer)
+[![CI](https://github.com/ducktors/fastify-moleculer/actions/workflows/ci.yml/badge.svg)](https://github.com/ducktors/fastify-moleculer/actions/workflows/ci.yml) [![Test](https://github.com/ducktors/fastify-moleculer/actions/workflows/test.yaml/badge.svg)](https://github.com/ducktors/fastify-moleculer/actions/workflows/test.yaml) [![npm](https://img.shields.io/npm/v/fastify-moleculer)](https://www.npmjs.com/package/fastify-moleculer) [![Coverage Status](https://coveralls.io/repos/github/ducktors/fastify-moleculer/badge.svg?branch=main)](https://coveralls.io/github/ducktors/fastify-moleculer?branch=main) [![Maintainability](https://api.codeclimate.com/v1/badges/8415332abe3ff865131d/maintainability)](https://codeclimate.com/github/ducktors/fastify-moleculer/maintainability) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/ducktors/fastify-moleculer/badge)](https://securityscorecards.dev/viewer/?uri=github.com/ducktors/fastify-moleculer)
 
 `fastify-moleculer` enables the use of [Moleculer](https://moleculer.services/) in a Fastify application.
 
-Supports Fastify versions `4.x`
-Supports moleculer version `0.14`
+## Features
+- Full TypeScript support
+- Compatible with Fastify `4.x`
+- Compatible with Moleculer `0.14`
+- Automatic service discovery and loading
+- Built-in cleanup hooks
+- Zero configuration required
 
-## Install
+## Installation
 
+```bash
+# Using npm
+npm install fastify-moleculer moleculer
+
+# Using pnpm
+pnpm add fastify-moleculer moleculer
+
+# Using yarn
+yarn add fastify-moleculer moleculer
 ```
-npm i fastify-moleculer moleculer
-```
+
+## Configuration
+
+### Plugin Options
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `serviceFolder` | `string` | `undefined` | Directory to load services from |
+| `serviceMask` | `string` | `*.service.(js\|ts)` | File pattern for service discovery |
+| `preClose` | `(done: () => void) => void` | `undefined` | Hook called before broker shutdown |
 
 ## Usage
 
